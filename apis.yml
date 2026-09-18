@@ -1,7 +1,14 @@
 aid: sound
 name: Sound Agriculture
-description: 'Sound Agriculture is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Sound Agriculture is an Emeryville, California agriculture company founded in 2013 by Eric Davidson
+  and Travis Bayer that sells nature-based crop nutrition products to row-crop growers through an independent
+  dealer network: SOURCE, a foliar-applied soil activator that stimulates soil microbes to supply nitrogen
+  and phosphorus; BLUEPRINT, an arbuscular mycorrhizal fungi inoculant; and INFLECT. It also runs an on-demand
+  breeding program that tunes plant gene expression epigenetically without editing DNA. Sound Agriculture
+  is not a software company and publishes no developer program, API, SDK or machine-readable contract;
+  its only authenticated surface is a Salesforce Experience Cloud dealer portal at dealerportal.sound.ag.
+image: https://soundag-usa-production.imgix.net/assets/general/sound-agriculture-seo-image.jpg?w=1200
 url: https://raw.githubusercontent.com/api-evangelist/sound/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +19,14 @@ created: '2026-09-18'
 modified: '2026-09-18'
 tags:
 - Company
+- Agriculture
+- Agtech
+- Biologicals
+- Crop Nutrition
+- Soil Health
+- Fertilizer
+- Plant Breeding
+- Sustainability
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,96 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VulnerabilityDisclosure
+  url: security/sound-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/sound-domain-security.yml
+- type: WellKnown
+  url: well-known/sound-well-known.yml
+- type: SecurityTxt
+  url: well-known/sound-security.txt
+- type: Security
+  url: security/sound-vulnerability-disclosure.yml
+- type: Packages
+  url: packages/sound-packages.yml
+- type: Plans
+  url: plans/sound-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/sound-rate-limits.yml
+- type: LLMsTxt
+  url: llms/sound-llms.txt
 - type: Website
+  url: https://www.sound.ag/
+- type: About
+  url: https://www.sound.ag/about
+- type: Products
+  url: https://www.sound.ag/sound-solutions
+- type: Science
+  url: https://www.sound.ag/our-science
+- type: Blog
+  url: https://www.sound.ag/blog
+- type: Newsroom
+  url: https://www.sound.ag/news
+- type: Whitepapers
+  url: https://www.sound.ag/whitepapers
+- type: FAQ
+  url: https://www.sound.ag/faq
+- type: Support
+  url: https://www.sound.ag/contact
+- type: Careers
+  url: https://www.sound.ag/careers
+- type: Sustainability
+  url: https://www.sound.ag/sustainability
+- type: DealerPortal
+  url: https://dealerportal.sound.ag/
+- type: GitHubOrganization
+  url: https://github.com/soundag
+- type: LinkedIn
+  url: https://www.linkedin.com/company/sound-agriculture/
+- type: TermsOfService
+  url: https://www.sound.ag/terms
+- type: PrivacyPolicy
+  url: https://www.sound.ag/privacy-policy
+- type: SecondaryMarket
   url: https://forgeglobal.com/sound_stock/
+x-enrichment:
+  date: '2026-09-18'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Sound Agriculture sells physical crop-nutrition biologicals (SOURCE, BLUEPRINT, INFLECT) through dealers
+    and runs a plant-breeding lab; its whole public surface is a Craft CMS marketing site whose API-shaped
+    paths 404, its api./developer./docs. subdomains are a wildcard CNAME to Pardot with no TLS certificate,
+    its only authenticated host is a Salesforce Experience Cloud dealer portal that 302s to /login, and
+    its GitHub org holds lab-automation code and a Postman collection for Leaf Agriculture's API rather
+    than any Sound API.
+  evidence:
+  - url: https://www.sound.ag/openapi.json
+    status: 404
+  - url: https://www.sound.ag/api
+    status: 404
+  - url: https://www.sound.ag/graphql
+    status: 404
+  - url: https://www.sound.ag/llms.txt
+    status: 404
+  - url: https://www.sound.ag/.well-known/agent-card.json
+    status: 404
+  - url: https://www.sound.ag/.well-known/agent.json
+    status: 404
+  - url: https://dealerportal.sound.ag/api
+    status: 302
+  - url: https://dealerportal.sound.ag/.well-known/openid-configuration
+    status: 200
+  - url: https://www.sound.ag/.well-known/security.txt
+    status: 200
+  - url: https://github.com/soundag
+    status: 200
+  - url: https://www.sound.ag/
+    status: 200
+  - url: https://forgeglobal.com/sound_stock/
+    status: 403
+  checked: '2026-09-18'

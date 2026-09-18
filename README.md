@@ -64,5 +64,11 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Sound Agriculture is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/sound_stock/
+Sound Agriculture is an Emeryville, California agriculture company (founded 2013) that sells nature-based crop-nutrition products — SOURCE, BLUEPRINT and INFLECT — to row-crop growers through an independent dealer network, and runs an epigenetic on-demand breeding program. It publishes no public API, SDK, developer portal or machine-readable contract; its only authenticated surface is a Salesforce Experience Cloud dealer portal.
+
+- Website: https://www.sound.ag/
+- Dealer portal: https://dealerportal.sound.ag/
+- GitHub: https://github.com/soundag
+- Secondary-market listing: https://forgeglobal.com/sound_stock/
+
+Profiled 2026-09-18. What was found is recorded under `well-known/` (a served security.txt and the dealer portal's OIDC discovery document), `security/`, `packages/`, `plans/`, `rate-limits/` and `llms/`; every API-shaped path probed returned 404 and the coverage state in `apis.yml` explains why the profile is thin.

@@ -1,0 +1,15 @@
+# security.txt file for https://www.sound.ag/ - more info: https://securitytxt.org/
+# (required) Contact email address for security issues
+Contact: whit+dev@onedesigncompany.com
+
+# (required) Expiration date for the security information herein
+Expiration: 2027-09-18T12:31:49-07:00
+
+# (optional) OpenPGP key:
+Encryption: https://www.sound.ag/pgp-key.txt
+
+# (optional) Security policy page:
+Policy: https://www.sound.ag/security-policy
+
+# (optional) Security acknowledgements page:
+Acknowledgements: https://www.sound.ag/hall-of-fame

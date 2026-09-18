@@ -1,0 +1,33 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Sound Agriculture
+providerId: sound
+generated: '2026-09-18'
+created: '2026-09-18'
+modified: '2026-09-18'
+method: searched
+source: https://www.sound.ag/
+sources:
+  - https://www.sound.ag/
+  - https://dealerportal.sound.ag/
+tags:
+  - Agriculture
+  - Rate Limiting
+description: >-
+  Sound Agriculture publishes no API and therefore no rate-limit documentation. Its only
+  authenticated surface, dealerportal.sound.ag, is a Salesforce Experience Cloud community that
+  302s every anonymous path to /login; any limits there are Salesforce platform limits, not a
+  Sound Agriculture policy.
+notes: >-
+  Searched 2026-09-18. No public API reference exists to document limits, and no rate-limit
+  headers could be observed: the marketing host returns Craft CMS 404 pages for every API-shaped
+  path and the dealer portal answers 401 on /.well-known/* and 302-to-login on everything else.
+  limit_count is an honest zero.
+limit_count: 0
+limits: []
+evidence:
+  - url: https://www.sound.ag/api
+    status: 404
+  - url: https://dealerportal.sound.ag/api
+    status: 302

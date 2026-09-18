@@ -1,0 +1,129 @@
+generated: '2026-09-18'
+method: searched
+source: live probes of sound.ag, www.sound.ag and dealerportal.sound.ag on 2026-09-18
+provider: Sound Agriculture
+providerId: sound
+hit_count: 2
+note: "Two real documents. (1) www.sound.ag serves an RFC 9116 security.txt with Contact and Expiration (required\
+  \ fields present); its optional Policy, Encryption and Acknowledgements URLs all 404 and the Contact is the site's\
+  \ web agency (One Design Company, per /humans.txt), so it reads as the CMS build's boilerplate rather than a company\
+  \ security program. (2) dealerportal.sound.ag, a Salesforce Experience Cloud community (DNS CNAME to *.live.siteforce.com,\
+  \ sfdc robots.txt), serves the standard Salesforce OIDC discovery document at /.well-known/openid-configuration\
+  \ \u2014 first-party host, platform-authored document, scopes are Salesforce's. Every other path 404s on the marketing\
+  \ host and 401s on the portal. api./developer./docs.sound.ag resolve via a wildcard CNAME to Pardot (go.pardot.com)\
+  \ and fail the TLS handshake \u2014 they are not hosts. go.sound.ag (Pardot) 200s every path by redirecting to\
+  \ www.sound.ag/ and was excluded as a catch-all."
+hosts:
+- host: https://sound.ag
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: sound-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/api-catalog.json
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  path_echo_control:
+    path: /.well-known/sound-negative-control-f3f0ac13.json
+    status: 404
+    result: passed
+- host: https://www.sound.ag
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: sound-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/api-catalog.json
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  path_echo_control:
+    path: /.well-known/sound-negative-control-f3f0ac13.json
+    status: 404
+    result: passed
+- host: https://dealerportal.sound.ag
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: sound-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+  - path: /.well-known/oauth-protected-resource
+    status: 401
+  - path: /.well-known/api-catalog
+    status: 401
+  - path: /.well-known/api-catalog.json
+    status: 401
+  - path: /.well-known/ai-plugin.json
+    status: 401
+  - path: /.well-known/ucp.json
+    status: 401
+  - path: /.well-known/acp.json
+    status: 401
+  - path: /.well-known/aauth-resource.json
+    status: 401
+  - path: /.well-known/apis.json
+    status: 401
+  - path: /apis.json
+    status: 302
+    note: "302 to /login?ec=302&startURL=<path> \u2014 the Salesforce Experience Cloud login shell, not a document"
+  - path: /apis.yml
+    status: 302
+    note: "302 to /login?ec=302&startURL=<path> \u2014 the Salesforce Experience Cloud login shell, not a document"
+  - path: /.well-known/agent-card.json
+    status: 401
+  - path: /.well-known/agent.json
+    status: 401
+  path_echo_control:
+    path: /.well-known/sound-negative-control-f3f0ac13.json
+    status: 401
+    result: passed

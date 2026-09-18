@@ -1,0 +1,42 @@
+generated: '2026-09-18'
+method: searched
+source: >-
+  github.com/soundag (org profile links https://www.sound.ag/), registry.npmjs.org and pypi.org,
+  probed 2026-09-18
+provider: Sound Agriculture
+providerId: sound
+description: >-
+  Sound Agriculture publishes no client SDK, because it publishes no API. The first-party GitHub
+  organization github.com/soundag (its profile URL is https://www.sound.ag/) holds 15 public
+  repositories, all of them lab tooling or upstream forks: liquid-handler automation scripts
+  (Tecan Fluent, Agilent Bravo, Opentrons OT-2), Oxford Nanopore basecalling and methylation
+  forks (bonito, remora, megalodon, rerio, modbam2bed), a MaSuRCA assembler fork, the WashU
+  epigenome browser, a differentially-methylated-region R package (sounDMR), an S3 backup GitHub
+  action, and a Postman collection for Leaf Agriculture's API — a third party's API that Sound
+  consumes for field operations and satellite imagery, not a Sound API. None is a client library
+  for a Sound Agriculture service, so no `SDKs` pointer is emitted; only the artifact-native
+  `Packages` pointer is wired. A second org, github.com/sound-agriculture, exists with zero public
+  repositories.
+package_count: 0
+packages: []
+registries_searched:
+  - registry: npm
+    query: sound-agriculture, soundag, @soundag/sdk
+    result: 404 on all three — no first-party package
+    version: null
+  - registry: pypi
+    query: sound-agriculture, soundag
+    result: 404 on both — no first-party package
+    version: null
+  - registry: github
+    query: github.com/soundag (15 public repos), github.com/sound-agriculture (0 public repos)
+    result: lab automation, bioinformatics forks, and a Postman collection for Leaf Agriculture's API; no SDK
+    version: null
+related:
+  - name: Leaf-API-Postman-Collection
+    url: https://github.com/soundag/Leaf-API-Postman-Collection
+    role: consumer
+    note: >-
+      "How to query & access operations and satellite images via Leaf" — documents Sound's use
+      of Leaf Agriculture's API (withleaf.io). Evidence that Sound integrates agtech data APIs
+      as a consumer; not a Sound Agriculture package.
